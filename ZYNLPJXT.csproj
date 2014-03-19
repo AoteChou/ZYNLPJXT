@@ -51,15 +51,22 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BLL\text.txt" />
+    <Content Include="DAL\text.txt" />
+    <Content Include="Entity\text.txt" />
+    <Content Include="Factory\text.txt" />
+    <Content Include="IBLL\text.txt" />
+    <Content Include="IDAL\text.txt" />
     <Content Include="index.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="TextFile1.txt" />
+    <Content Include="Utility\text.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
