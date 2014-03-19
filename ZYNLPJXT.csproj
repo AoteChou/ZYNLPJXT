@@ -53,7 +53,6 @@
   <ItemGroup>
     <Content Include="BLL\text.txt" />
     <Content Include="DAL\text.txt" />
-    <Content Include="Entity\text.txt" />
     <Content Include="Factory\text.txt" />
     <Content Include="IBLL\text.txt" />
     <Content Include="IDAL\text.txt" />
@@ -73,6 +72,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\BJ.cs" />
+    <Compile Include="Entity\CPJD.cs" />
+    <Compile Include="Entity\CT.cs" />
+    <Compile Include="Entity\EJZB.cs" />
+    <Compile Include="Entity\GND.cs" />
+    <Compile Include="Entity\JDKC.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
