@@ -51,18 +51,11 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BLL\test.txt" />
-    <Content Include="DAL\test.txt" />
-    <Content Include="Entity\test.txt" />
-    <Content Include="Factory\test.txt" />
-    <Content Include="IBLL\test.txt" />
-    <Content Include="IDAL\test.txt" />
     <Content Include="index.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Utility\test.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -85,7 +78,15 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Factory\" />
+    <Folder Include="IBLL\" />
+    <Folder Include="IDAL\" />
+    <Folder Include="Utility\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
