@@ -1,0 +1,4 @@
+F:\DevelopAndDesign\Visual Studio Development\ZYNLPJXT\ZYNLPJXT\bin\ZYNLPJXT.dll
+F:\DevelopAndDesign\Visual Studio Development\ZYNLPJXT\ZYNLPJXT\bin\ZYNLPJXT.pdb
+F:\DevelopAndDesign\Visual Studio Development\ZYNLPJXT\ZYNLPJXT\obj\Debug\ZYNLPJXT.dll
+F:\DevelopAndDesign\Visual Studio Development\ZYNLPJXT\ZYNLPJXT\obj\Debug\ZYNLPJXT.pdb
