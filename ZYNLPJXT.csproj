@@ -53,9 +53,6 @@
   <ItemGroup>
     <Content Include="BLL\text.txt" />
     <Content Include="DAL\text.txt" />
-    <Content Include="Factory\text.txt" />
-    <Content Include="IBLL\text.txt" />
-    <Content Include="IDAL\text.txt" />
     <Content Include="index.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
@@ -114,7 +111,6 @@
     <Compile Include="Entity\ZYEJZB.cs" />
     <Compile Include="Entity\ZYKC.cs" />
     <Compile Include="Entity\ZYKCView.cs" />
-
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
