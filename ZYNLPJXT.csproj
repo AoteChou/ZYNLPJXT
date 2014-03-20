@@ -32,6 +32,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <PublishDatabases>false</PublishDatabases>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,10 +54,57 @@
     <Content Include="BLL\text.txt" />
     <Content Include="DAL\text.txt" />
     <Content Include="index.aspx" />
-    <Content Include="Styles\Site.css" />
+    <Content Include="Scripts\easyloader.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery.easyui.min.js" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Styles\default\accordion.css" />
+    <Content Include="Styles\default\calendar.css" />
+    <Content Include="Styles\default\combo.css" />
+    <Content Include="Styles\default\combobox.css" />
+    <Content Include="Styles\default\datagrid.css" />
+    <Content Include="Styles\default\datebox.css" />
+    <Content Include="Styles\default\dialog.css" />
+    <Content Include="Styles\default\easyui.css" />
+    <Content Include="Styles\default\images\accordion_arrows.png" />
+    <Content Include="Styles\default\images\blank.gif" />
+    <Content Include="Styles\default\images\calendar_arrows.png" />
+    <Content Include="Styles\default\images\combo_arrow.png" />
+    <Content Include="Styles\default\images\datagrid_icons.png" />
+    <Content Include="Styles\default\images\datebox_arrow.png" />
+    <Content Include="Styles\default\images\layout_arrows.png" />
+    <Content Include="Styles\default\images\linkbutton_bg.png" />
+    <Content Include="Styles\default\images\loading.gif" />
+    <Content Include="Styles\default\images\menu_arrows.png" />
+    <Content Include="Styles\default\images\messager_icons.png" />
+    <Content Include="Styles\default\images\pagination_icons.png" />
+    <Content Include="Styles\default\images\panel_tools.png" />
+    <Content Include="Styles\default\images\searchbox_button.png" />
+    <Content Include="Styles\default\images\slider_handle.png" />
+    <Content Include="Styles\default\images\spinner_arrows.png" />
+    <Content Include="Styles\default\images\tabs_icons.png" />
+    <Content Include="Styles\default\images\tree_icons.png" />
+    <Content Include="Styles\default\images\validatebox_arrows.png" />
+    <Content Include="Styles\default\images\validatebox_warning.png" />
+    <Content Include="Styles\default\layout.css" />
+    <Content Include="Styles\default\linkbutton.css" />
+    <Content Include="Styles\default\menu.css" />
+    <Content Include="Styles\default\menubutton.css" />
+    <Content Include="Styles\default\messager.css" />
+    <Content Include="Styles\default\pagination.css" />
+    <Content Include="Styles\default\panel.css" />
+    <Content Include="Styles\default\progressbar.css" />
+    <Content Include="Styles\default\propertygrid.css" />
+    <Content Include="Styles\default\searchbox.css" />
+    <Content Include="Styles\default\slider.css" />
+    <Content Include="Styles\default\spinner.css" />
+    <Content Include="Styles\default\splitbutton.css" />
+    <Content Include="Styles\default\tabs.css" />
+    <Content Include="Styles\default\tree.css" />
+    <Content Include="Styles\default\validatebox.css" />
+    <Content Include="Styles\default\window.css" />
+    <Content Include="Styles\icon.css" />
     <Content Include="Utility\text.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -121,7 +170,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Styles\default\images\Thumbs.db" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
