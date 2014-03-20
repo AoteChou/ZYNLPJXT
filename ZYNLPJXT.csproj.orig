@@ -53,6 +53,7 @@
   <ItemGroup>
     <Content Include="BLL\text.txt" />
     <Content Include="DAL\text.txt" />
+    <Content Include="Entity\text.txt" />
     <Content Include="Factory\text.txt" />
     <Content Include="IBLL\text.txt" />
     <Content Include="IDAL\text.txt" />
@@ -61,7 +62,11 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+<<<<<<< HEAD
+    <Content Include="TextFile1.txt" />
+=======
     <Content Include="Utility\text.txt" />
+>>>>>>> 00828d2d0779691020621af3303ec4f20c1079cf
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -72,49 +77,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\BJ.cs" />
-    <Compile Include="Entity\CPJD.cs" />
-    <Compile Include="Entity\CT.cs" />
-    <Compile Include="Entity\CTView.cs" />
-    <Compile Include="Entity\EJZB.cs" />
-    <Compile Include="Entity\GND.cs" />
-    <Compile Include="Entity\JDKC.cs" />
-    <Compile Include="Entity\JDKCView.cs" />
-    <Compile Include="Entity\JDKCXS.cs" />
-    <Compile Include="Entity\JDKCXSView.cs" />
-    <Compile Include="Entity\JSGNB.cs" />
-    <Compile Include="Entity\JSNJZYKC.cs" />
-    <Compile Include="Entity\JS_role.cs" />
-    <Compile Include="Entity\JS_Tea.cs" />
-    <Compile Include="Entity\KC.cs" />
-    <Compile Include="Entity\KCFZR.cs" />
-    <Compile Include="Entity\KCXZ.cs" />
-    <Compile Include="Entity\KCZSDY.cs" />
-    <Compile Include="Entity\NJ.cs" />
-    <Compile Include="Entity\NJZYKC.cs" />
-    <Compile Include="Entity\XSKCView.cs" />
-    <Compile Include="Entity\PCJL.cs" />
-    <Compile Include="Entity\ST.cs" />
-    <Compile Include="Entity\STZSDB.cs" />
-    <Compile Include="Entity\XK.cs" />
-    <Compile Include="Entity\XKFZR.cs" />
-    <Compile Include="Entity\XS.cs" />
-    <Compile Include="Entity\XSKCB.cs" />
-    <Compile Include="Entity\XY.cs" />
-    <Compile Include="Entity\YH.cs" />
-    <Compile Include="Entity\YHGNB.cs" />
-    <Compile Include="Entity\YHGNView.cs" />
-    <Compile Include="Entity\YHJSB.cs" />
-    <Compile Include="Entity\YHJSView.cs" />
-    <Compile Include="Entity\YJZB.cs" />
-    <Compile Include="Entity\ZSD.cs" />
-    <Compile Include="Entity\ZSDY.cs" />
-    <Compile Include="Entity\ZSLY.cs" />
-    <Compile Include="Entity\ZY.cs" />
-    <Compile Include="Entity\ZYEJZB.cs" />
-    <Compile Include="Entity\ZYKC.cs" />
-    <Compile Include="Entity\ZYKCView.cs" />
-
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

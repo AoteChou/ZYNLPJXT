@@ -63,7 +63,7 @@ namespace ZYNLPJXT.Entity
             set { jzxq = value; }
         }
 
-        //测评阶段简介
+
         private string cpjdjj;
 
         public string Cpjdjj
@@ -72,6 +72,5 @@ namespace ZYNLPJXT.Entity
             set { cpjdjj = value; }
         }
 
-        
     }
 }
