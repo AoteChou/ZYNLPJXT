@@ -85,6 +85,13 @@ namespace ZYNLPJXT.Entity
             get { return sjxf; }
             set { sjxf = value; }
         }
+        private string kcxzmc; //课程性质名称
+
+        public string Kcxzmc
+        {
+            get { return kcxzmc; }
+            set { kcxzmc = value; }
+        }
 
     }
 }
