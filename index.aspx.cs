@@ -16,6 +16,7 @@ namespace ZYNLPJXT
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
             string SqlConUrl=ConfigurationManager.AppSettings["connectionStr"];
 
             SqlConnection con = new SqlConnection(SqlConUrl);
@@ -30,7 +31,7 @@ namespace ZYNLPJXT
             }
             Response.Write("col1:" + col1 + "  " + "col2:" + col2 + SqlConUrl);
             con.Close();
-            
+            */
         }
     }
 }
