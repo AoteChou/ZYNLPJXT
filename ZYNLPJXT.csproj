@@ -78,6 +78,20 @@
     <Compile Include="Entity\EJZB.cs" />
     <Compile Include="Entity\GND.cs" />
     <Compile Include="Entity\JDKC.cs" />
+    <Compile Include="Entity\JDKCView.cs" />
+    <Compile Include="Entity\JDKCXS.cs" />
+    <Compile Include="Entity\JDKCXSView.cs" />
+    <Compile Include="Entity\JSGNB.cs" />
+    <Compile Include="Entity\JSNJZYKC.cs" />
+    <Compile Include="Entity\JS_role.cs" />
+    <Compile Include="Entity\JS_Tea.cs" />
+    <Compile Include="Entity\KC.cs" />
+    <Compile Include="Entity\KCFZR.cs" />
+    <Compile Include="Entity\KCXZ.cs" />
+    <Compile Include="Entity\KCZSDY.cs" />
+    <Compile Include="Entity\NJ.cs" />
+    <Compile Include="Entity\NJZYKC.cs" />
+    <Compile Include="Entity\XSKCView.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

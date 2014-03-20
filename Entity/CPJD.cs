@@ -63,13 +63,15 @@ namespace ZYNLPJXT.Entity
             set { jzxq = value; }
         }
 
-        //简介
-        private string jj;
+        //测评阶段简介
+        private string cpjdjj;
 
-        public string Jj
+        public string Cpjdjj
         {
-            get { return jj; }
-            set { jj = value; }
+            get { return cpjdjj; }
+            set { cpjdjj = value; }
         }
+
+        
     }
 }
