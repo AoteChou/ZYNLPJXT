@@ -64,12 +64,14 @@ namespace ZYNLPJXT.Entity
         }
 
         //简介
-        private string jj;
+        private string cpjdjj;
 
-        public string Jj
+        public string Cpjdjj
         {
-            get { return jj; }
-            set { jj = value; }
+            get { return cpjdjj; }
+            set { cpjdjj = value; }
         }
+
+      
     }
 }
