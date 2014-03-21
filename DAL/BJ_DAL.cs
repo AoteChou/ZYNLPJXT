@@ -27,7 +27,7 @@ namespace ZYNLPJXT.DAL
                 col2 = reader.GetString(1);
             }
             bj.Bjmc = col1;
-            reader.Close();
+            dbCon.closeDbCon();
             return bj;
         }
     }
