@@ -142,6 +142,8 @@
     <Compile Include="DAL\CT_DAL.cs" />
     <Compile Include="DAL\EJZB_DAL.cs" />
     <Compile Include="DAL\GND_DAL.cs" />
+    <Compile Include="DAL\JDKCView.cs" />
+    <Compile Include="DAL\JDKCXSView_DAL.cs" />
     <Compile Include="DAL\JDKCXS_DAL.cs" />
     <Compile Include="DAL\JDKC_DAL.cs" />
     <Compile Include="DAL\JSGNB_DAL.cs" />
@@ -153,6 +155,7 @@
     <Compile Include="DAL\KC_DAL.cs" />
     <Compile Include="DAL\NJZYKC_DAL.cs" />
     <Compile Include="DAL\NJ_DAL.cs" />
+    <Compile Include="DAL\XSKCView_DAL.cs" />
     <Compile Include="Entity\BJ.cs" />
     <Compile Include="Entity\CPJD.cs" />
     <Compile Include="Entity\CT.cs" />

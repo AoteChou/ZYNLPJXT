@@ -8,6 +8,8 @@ namespace ZYNLPJXT.Entity
     //学生课程View
     public class XSKCView
     {
+
+
         //课程简介
         private string kcjj;
 
