@@ -14,7 +14,9 @@ namespace ZYNLPJXT.Utility
     /// </summary>
     public class DbConnection
     {
-         private static string SqlConUrl = ConfigurationManager.AppSettings["connectionStr"];
+         //private static string SqlConUrl = ConfigurationManager.AppSettings["connectionStr"];
+
+        private static string SqlConUrl = "server=JESSEN-PC;database=ZYNLPJXT;uid=sa;pwd='sa'";
 
          private SqlConnection sqlCon=null;
 
@@ -45,7 +47,37 @@ namespace ZYNLPJXT.Utility
             int effectedRows=sqlCom.ExecuteNonQuery();
             return effectedRows;
         }
-      
+
+
+
+        ///<summary>
+        ///执行查询的Sql语句。使用完需要手动调用closeDbCon函数
+        ///</summary>
+        public SqlDataReader executeQuery(string sql, SqlParameter[] sqlparameters)
+        {
+
+            SqlCommand sqlCom = new SqlCommand(sql, sqlCon);
+            sqlCom.Parameters.AddRange(sqlparameters);
+            SqlDataReader reader = sqlCom.ExecuteReader(CommandBehavior.CloseConnection);
+            return reader;
+        }
+
+
+        /// <summary>
+        /// 执行非Sql查询操作，如：update，delete和insert操作。使用完需要手动调用closeDbCon函数
+        /// </summary>
+        /// <param name="sql">须执行的Sql语句</param>
+        /// <param name="sqlparameters">参数数组</param>
+        /// <returns>影响的行数</returns>
+        public int executeNonQuery(string sql, SqlParameter[] sqlparameters)
+        {
+            SqlCommand sqlCom = new SqlCommand(sql, sqlCon);
+            sqlCom.Parameters.AddRange(sqlparameters);
+            int effectedRows = sqlCom.ExecuteNonQuery();
+            return effectedRows;
+        }
+
+
 
         /// <summary>
         /// 关闭数据连接

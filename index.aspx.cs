@@ -19,8 +19,7 @@ namespace ZYNLPJXT
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            BJ bj=new BJ_DAL().getBJbyBH(1);
-            Response.Write(bj.Bjmc+"   "+bj.Bjbh);
+           
         }
     }
 }

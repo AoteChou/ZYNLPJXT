@@ -21,11 +21,8 @@ namespace ZYNLPJXT.DAL
         /// <returns>插入成功返回true，失败返回false</returns>
         public bool insert(NJ nj)
         {
-
             string sql = "insert into NJ (NJMC) values (@njmc)";
-
             SqlParameter[] sqlPar = {new SqlParameter("@njmc", nj.Njmc)};
-
             DbConnection dbCon = new DbConnection();
             bool executeResult = false;
             if (dbCon.executeNonQuery(sql,sqlPar) > 0)
@@ -45,9 +42,7 @@ namespace ZYNLPJXT.DAL
         public bool update(NJ nj) {
 
             string sql = "update NJ SET njmc=@njmc where njbh=@njbh ";
-
             SqlParameter[] sqlPars = { new SqlParameter("@njmc",nj.Njmc),new SqlParameter("@njbh",nj.Njbh)};
-
             DbConnection dbCon = new DbConnection();
             bool executeResult = false;
             if (dbCon.executeNonQuery(sql,sqlPars) > 0)
@@ -72,7 +67,6 @@ namespace ZYNLPJXT.DAL
             while (reader.Read()) {
                 list.Add(new NJ((int)reader["njbh"],(string)reader["njmc"]));
             }
-
             dbCon.closeDbCon();
             return list.ToArray();
         }
@@ -93,10 +87,6 @@ namespace ZYNLPJXT.DAL
             {
                 nj.Njbh = (int)reader["njbh"];
                 nj.Njmc=(string)reader["njmc"];
-            }
-            else {
-                nj.Njbh = -1;
-                nj.Njmc = null;
             }
             dbCon.closeDbCon();
             return nj;

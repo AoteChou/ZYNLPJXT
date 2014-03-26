@@ -138,6 +138,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BJ_DAL.cs" />
+    <Compile Include="DAL\CT_DAL.cs" />
+    <Compile Include="DAL\GND_DAL.cs" />
+    <Compile Include="DAL\JSGNB_DAL.cs" />
+    <Compile Include="DAL\JSRole_DAL.cs" />
+    <Compile Include="DAL\JSTea_DAL.cs" />
+    <Compile Include="DAL\KCXZ_DAL.cs" />
+    <Compile Include="DAL\KC_DAL.cs" />
     <Compile Include="DAL\NJ_DAL.cs" />
     <Compile Include="Entity\BJ.cs" />
     <Compile Include="Entity\CPJD.cs" />
