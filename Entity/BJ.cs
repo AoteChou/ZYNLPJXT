@@ -15,7 +15,7 @@ namespace ZYNLPJXT.Entity
             this.Bjbh = -1;
             this.Bjmc = "";
             this.Njbh = -1;
-            this.Rxnf = DateTime.Parse("1000/1/1");
+            this.Rxnf = DateTime.Parse("1753/1/1");
             this.Zybh = -1;
         }
 

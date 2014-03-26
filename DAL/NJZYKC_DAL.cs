@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using ZYNLPJXT.Utility;
 using ZYNLPJXT.Entity;
+using ZYNLPJXT.Utility;
 using System.Data.SqlClient;
 
 namespace ZYNLPJXT.DAL
 {
-    //出题 数据库访问层
-    public class CT_DAL
+    //年级专业课程 数据库访问层
+    public class NJZYKC_DAL
     {
         /// <summary>
-        ///插入出题实体 
+        ///插入年级专业课程实体 
         /// </summary>
-        public bool insert(CT _ct)
+        public bool insert(NJZYKC _njzykc)
         {
-            string sql = "insert into CT (kcbh,zybh,ctr) values (@kcbh,@zybh,@ctr)";
-            SqlParameter[] sqlPar = { new SqlParameter("@kcbh", _ct.Kcbh),
-                                       new SqlParameter("@zybh",_ct.Zybh),
-                                       new SqlParameter("@ctr",_ct.Ctr)
+            string sql = "insert into NJZYKC (kcbh,zybh,njbh) values (@kcbh,@zybh,@njbh)";
+            SqlParameter[] sqlPar = { new SqlParameter("@kcbh", _njzykc.Kcbh),
+                                       new SqlParameter("@zybh",_njzykc.Zybh),
+                                       new SqlParameter("@njbh",_njzykc.Njbh)
                                     };
             DbConnection dbCon = new DbConnection();
             bool executeResult = false;
@@ -33,15 +33,15 @@ namespace ZYNLPJXT.DAL
 
 
         /// <summary>
-        /// 删除出题ct实体
+        /// 删除年级专业课程实体
         /// </summary>
         /// <returns>是否删除成功</returns>
-        public bool delete(CT _ct)
+        public bool delete(NJZYKC _njzykc)
         {
-            string sql = "delete from CT where kcbh=@kcbh and zybh=@zybh and ctr=@ctr";
-            SqlParameter[] sqlPars = { new SqlParameter("@kcbh", _ct.Kcbh),
-                                         new SqlParameter("@zybh", _ct.Zybh),
-                                         new SqlParameter("@ctr",_ct.Ctr)
+            string sql = "delete from NJZYKC where kcbh=@kcbh and zybh=@zybh and njbh=@njbh";
+            SqlParameter[] sqlPars = { new SqlParameter("@kcbh", _njzykc.Kcbh),
+                                         new SqlParameter("@zybh", _njzykc.Zybh),
+                                         new SqlParameter("@njbh",_njzykc.Njbh)
                                      };
             DbConnection dbCon = new DbConnection();
             bool executeResult = false;
@@ -55,18 +55,18 @@ namespace ZYNLPJXT.DAL
 
 
         /// <summary>
-        /// 获取全部出题信息
+        /// 获取全部年级专业课程信息
         /// </summary>
-        /// <returns>返回数据库中所有的出题信息</returns>
-        public CT[] getAll()
+        /// <returns>返回数据库中所有的年级专业课程信息</returns>
+        public NJZYKC[] getAll()
         {
-            string sql = "select * from CT";
+            string sql = "select * from NJZYKC";
             DbConnection dbCon = new DbConnection();
             SqlDataReader reader = dbCon.executeQuery(sql);
-            IList<CT> list = new List<CT>();
+            IList<NJZYKC> list = new List<NJZYKC>();
             while (reader.Read())
             {
-                list.Add(new CT((int)reader["kcbh"],(int)reader["zybh"],(string)reader["ctr"]));
+                list.Add(new NJZYKC((int)reader["kcbh"],(int)reader["njbh"],(int)reader["zybh"]));
             }
             dbCon.closeDbCon();
             return list.ToArray();
