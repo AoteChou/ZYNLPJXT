@@ -142,7 +142,7 @@
     <Compile Include="DAL\CT_DAL.cs" />
     <Compile Include="DAL\EJZB_DAL.cs" />
     <Compile Include="DAL\GND_DAL.cs" />
-    <Compile Include="DAL\JDKCView.cs" />
+    <Compile Include="DAL\JDKCView_DAL.cs" />
     <Compile Include="DAL\JDKCXSView_DAL.cs" />
     <Compile Include="DAL\JDKCXS_DAL.cs" />
     <Compile Include="DAL\JDKC_DAL.cs" />
