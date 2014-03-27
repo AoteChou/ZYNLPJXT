@@ -58,6 +58,23 @@ namespace ZYNLPJXT.DAL
             return executeResult;
         }
 
+        /// <summary>
+        /// 删除功能点实体
+        /// </summary>
+        /// <returns>是否删除成功</returns>
+        public bool delete(GND _gnd)
+        {
+            string sql = "delete from GND where gnbh=@gnbh ";
+            SqlParameter[] sqlPars = { new SqlParameter("@gnbh", _gnd.Gnbh) };
+            DbConnection dbCon = new DbConnection();
+            bool executeResult = false;
+            if (dbCon.executeNonQuery(sql, sqlPars) > 0)
+                executeResult = true;
+            else
+                executeResult = false;
+            dbCon.closeDbCon();
+            return executeResult;
+        }
 
         /// <summary>
         /// 获取全部功能点信息

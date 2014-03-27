@@ -53,6 +53,27 @@ namespace ZYNLPJXT.DAL
             return executeResult;
         }
 
+        /// <summary>
+        /// 删除NJ实体
+        /// </summary>
+        /// <param name="nj"></param>
+        /// <returns>是否删除成功</returns>
+        public bool delete(NJ nj)
+        {
+
+            string sql = "delete from NJ where njbh=@njbh ";
+            SqlParameter[] sqlPars = { new SqlParameter("@njmc", nj.Njmc), new SqlParameter("@njbh", nj.Njbh) };
+            DbConnection dbCon = new DbConnection();
+            bool executeResult = false;
+            if (dbCon.executeNonQuery(sql, sqlPars) > 0)
+                executeResult = true;
+            else
+                executeResult = false;
+            dbCon.closeDbCon();
+            return executeResult;
+        }
+       
+
 
         /// <summary>
         /// 获取全部年级信息

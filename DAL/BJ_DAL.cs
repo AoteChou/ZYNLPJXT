@@ -37,6 +37,24 @@ namespace ZYNLPJXT.DAL
             return executedResult;
         }
 
+        /// <summary>
+        /// 删除班级实体
+        /// </summary>
+        /// <returns>是否删除成功</returns>
+        public bool delete(BJ _bj)
+        {
+            string sql = "delete from BJ where bjbh=@bjbh ";
+            SqlParameter[] sqlPars = { new SqlParameter("@bjbh", _bj.Bjbh) };
+            DbConnection dbCon = new DbConnection();
+            bool executeResult = false;
+            if (dbCon.executeNonQuery(sql, sqlPars) > 0)
+                executeResult = true;
+            else
+                executeResult = false;
+            dbCon.closeDbCon();
+            return executeResult;
+        }
+
 
         /// <summary>
         /// 更新班级实体。需要确保班级的主键不为默认字段。
