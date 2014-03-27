@@ -8,6 +8,14 @@ namespace ZYNLPJXT.Entity
     //知识点
     public class ZSD
     {
+        public ZSD()
+        {
+            zslybh= -1;
+            zsdybh= -1;
+            zsdbh= -1;
+            zsdmc= "";
+            bz= "";
+        }
         private int zslybh; //知识领域编号
 
         public int Zslybh

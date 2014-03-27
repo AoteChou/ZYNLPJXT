@@ -47,32 +47,12 @@ namespace ZYNLPJXT.Utility
             int effectedRows=sqlCom.ExecuteNonQuery();
             return effectedRows;
         }
+<<<<<<< HEAD
         ///<summary>
         ///执行查询的Sql语句。使用完需要手动调用closeDbCon函数
         ///</summary>
         public SqlDataReader executeQuery(string sql,SqlParameter[] sqlparameters)
-        {
-
-            SqlCommand sqlCom = new SqlCommand(sql, sqlCon);
-            sqlCom.Parameters.AddRange(sqlparameters);
-            SqlDataReader reader = sqlCom.ExecuteReader(CommandBehavior.CloseConnection);
-            return reader;
-        }
-
-
-        /// <summary>
-        /// 执行非Sql查询操作，如：update，delete和insert操作。使用完需要手动调用closeDbCon函数
-        /// </summary>
-        /// <param name="sql">须执行的Sql语句</param>
-        /// <param name="sqlparameters">参数数组</param>
-        /// <returns>影响的行数</returns>
-        public int executeNonQuery(string sql,SqlParameter[] sqlparameters)
-        {
-            SqlCommand sqlCom = new SqlCommand(sql, sqlCon);
-            sqlCom.Parameters.AddRange(sqlparameters);
-            int effectedRows = sqlCom.ExecuteNonQuery();
-            return effectedRows;
-        }
+=======
 
 
 
@@ -80,6 +60,7 @@ namespace ZYNLPJXT.Utility
         ///执行查询的Sql语句。使用完需要手动调用closeDbCon函数
         ///</summary>
         public SqlDataReader executeQuery(string sql, SqlParameter[] sqlparameters)
+>>>>>>> 879d78dc3a6be183e7eb7dd6428f3b68d0d3b2e1
         {
 
             SqlCommand sqlCom = new SqlCommand(sql, sqlCon);
@@ -95,15 +76,23 @@ namespace ZYNLPJXT.Utility
         /// <param name="sql">须执行的Sql语句</param>
         /// <param name="sqlparameters">参数数组</param>
         /// <returns>影响的行数</returns>
+<<<<<<< HEAD
+        public int executeNonQuery(string sql,SqlParameter[] sqlparameters)
+=======
         public int executeNonQuery(string sql, SqlParameter[] sqlparameters)
+>>>>>>> 879d78dc3a6be183e7eb7dd6428f3b68d0d3b2e1
         {
             SqlCommand sqlCom = new SqlCommand(sql, sqlCon);
             sqlCom.Parameters.AddRange(sqlparameters);
             int effectedRows = sqlCom.ExecuteNonQuery();
             return effectedRows;
         }
+<<<<<<< HEAD
+      
+=======
 
 
+>>>>>>> 879d78dc3a6be183e7eb7dd6428f3b68d0d3b2e1
 
         /// <summary>
         /// 关闭数据连接

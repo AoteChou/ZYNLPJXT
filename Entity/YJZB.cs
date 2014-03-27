@@ -8,6 +8,11 @@ namespace ZYNLPJXT.Entity
     //一级指标
     public class YJZB
     {
+        public YJZB()
+        {
+            yjzbbh= -1;
+            yjzbmc= "";
+        }
         private int yjzbbh; //一级指标编号
 
         public int Yjzbbh

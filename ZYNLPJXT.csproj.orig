@@ -12,8 +12,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ZYNLPJXT</RootNamespace>
     <AssemblyName>ZYNLPJXT</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,43 +32,105 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <PublishDatabases>false</PublishDatabases>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BLL\text.txt" />
-    <Content Include="DAL\text.txt" />
-    <Content Include="Entity\text.txt" />
-    <Content Include="Factory\text.txt" />
-    <Content Include="IBLL\text.txt" />
-    <Content Include="IDAL\text.txt" />
+    <Content Include="Full.aspx" />
+    <Content Include="Full.html" />
     <Content Include="index.aspx" />
-    <Content Include="Styles\Site.css" />
+    <Content Include="Scripts\easyloader.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery.easyui.min.js" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
-<<<<<<< HEAD
-    <Content Include="TextFile1.txt" />
-=======
-    <Content Include="Utility\text.txt" />
->>>>>>> 00828d2d0779691020621af3303ec4f20c1079cf
-    <Content Include="Web.config" />
+    <Content Include="Scripts\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Styles\default\accordion.css" />
+    <Content Include="Styles\default\calendar.css" />
+    <Content Include="Styles\default\combo.css" />
+    <Content Include="Styles\default\combobox.css" />
+    <Content Include="Styles\default\datagrid.css" />
+    <Content Include="Styles\default\datebox.css" />
+    <Content Include="Styles\default\dialog.css" />
+    <Content Include="Styles\default\easyui.css" />
+    <Content Include="Styles\default\images\accordion_arrows.png" />
+    <Content Include="Styles\default\images\blank.gif" />
+    <Content Include="Styles\default\images\calendar_arrows.png" />
+    <Content Include="Styles\default\images\combo_arrow.png" />
+    <Content Include="Styles\default\images\datagrid_icons.png" />
+    <Content Include="Styles\default\images\datebox_arrow.png" />
+    <Content Include="Styles\default\images\layout_arrows.png" />
+    <Content Include="Styles\default\images\linkbutton_bg.png" />
+    <Content Include="Styles\default\images\loading.gif" />
+    <Content Include="Styles\default\images\menu_arrows.png" />
+    <Content Include="Styles\default\images\messager_icons.png" />
+    <Content Include="Styles\default\images\pagination_icons.png" />
+    <Content Include="Styles\default\images\panel_tools.png" />
+    <Content Include="Styles\default\images\searchbox_button.png" />
+    <Content Include="Styles\default\images\slider_handle.png" />
+    <Content Include="Styles\default\images\spinner_arrows.png" />
+    <Content Include="Styles\default\images\tabs_icons.png" />
+    <Content Include="Styles\default\images\tree_icons.png" />
+    <Content Include="Styles\default\images\validatebox_arrows.png" />
+    <Content Include="Styles\default\images\validatebox_warning.png" />
+    <Content Include="Styles\default\layout.css" />
+    <Content Include="Styles\default\linkbutton.css" />
+    <Content Include="Styles\default\menu.css" />
+    <Content Include="Styles\default\menubutton.css" />
+    <Content Include="Styles\default\messager.css" />
+    <Content Include="Styles\default\pagination.css" />
+    <Content Include="Styles\default\panel.css" />
+    <Content Include="Styles\default\progressbar.css" />
+    <Content Include="Styles\default\propertygrid.css" />
+    <Content Include="Styles\default\searchbox.css" />
+    <Content Include="Styles\default\slider.css" />
+    <Content Include="Styles\default\spinner.css" />
+    <Content Include="Styles\default\splitbutton.css" />
+    <Content Include="Styles\default\tabs.css" />
+    <Content Include="Styles\default\tree.css" />
+    <Content Include="Styles\default\validatebox.css" />
+    <Content Include="Styles\default\window.css" />
+    <Content Include="Styles\icon.css" />
+    <Content Include="Styles\icons\back.png" />
+    <Content Include="Styles\icons\blank.gif" />
+    <Content Include="Styles\icons\cancel.png" />
+    <Content Include="Styles\icons\cut.png" />
+    <Content Include="Styles\icons\edit_add.png" />
+    <Content Include="Styles\icons\edit_remove.png" />
+    <Content Include="Styles\icons\filesave.png" />
+    <Content Include="Styles\icons\help.png" />
+    <Content Include="Styles\icons\mini_add.png" />
+    <Content Include="Styles\icons\mini_edit.png" />
+    <Content Include="Styles\icons\mini_refresh.png" />
+    <Content Include="Styles\icons\no.png" />
+    <Content Include="Styles\icons\ok.png" />
+    <Content Include="Styles\icons\pencil.png" />
+    <Content Include="Styles\icons\print.png" />
+    <Content Include="Styles\icons\redo.png" />
+    <Content Include="Styles\icons\reload.png" />
+    <Content Include="Styles\icons\search.png" />
+    <Content Include="Styles\icons\sum.png" />
+    <Content Include="Styles\icons\tip.png" />
+    <Content Include="Styles\icons\undo.png" />
+    <Content Include="testdownload.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
@@ -75,8 +138,104 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="www.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\BJ_DAL.cs" />
+<<<<<<< HEAD
+    <Compile Include="DAL\CTView_DAL.cs" />
+    <Compile Include="DAL\PCJL_DAL.cs" />
+    <Compile Include="DAL\STZSDB_DAL.cs" />
+    <Compile Include="DAL\STZSDView_DAL.cs" />
+    <Compile Include="DAL\ST_DAL.cs" />
+    <Compile Include="DAL\XK_DAL.cs" />
+    <Compile Include="DAL\XSKCB_DAL.cs" />
+    <Compile Include="DAL\XS_DAL.cs" />
+    <Compile Include="DAL\XY_DAL.cs" />
+    <Compile Include="DAL\YHGNB_DAL.cs" />
+    <Compile Include="DAL\YHGNView_DAL.cs" />
+    <Compile Include="DAL\YHJSB_DAL.cs" />
+    <Compile Include="DAL\YHJSView_DAL.cs" />
+    <Compile Include="DAL\YH_DAL.cs" />
+    <Compile Include="DAL\YJZB_DAL.cs" />
+    <Compile Include="DAL\ZSDY_DAL.cs" />
+    <Compile Include="DAL\ZSD_DAL.cs" />
+    <Compile Include="DAL\ZSLY_DAL.cs" />
+    <Compile Include="DAL\ZYEJZBView_DAL.cs" />
+    <Compile Include="DAL\ZYEJZB_DAL.cs" />
+    <Compile Include="DAL\ZYKCView_DAL.cs" />
+    <Compile Include="DAL\ZYKC_DAL.cs" />
+    <Compile Include="DAL\ZY_DAL.cs" />
+=======
+    <Compile Include="DAL\CPJD_DAL.cs" />
+    <Compile Include="DAL\CT_DAL.cs" />
+    <Compile Include="DAL\EJZB_DAL.cs" />
+    <Compile Include="DAL\GND_DAL.cs" />
+    <Compile Include="DAL\JDKCView_DAL.cs" />
+    <Compile Include="DAL\JDKCXSView_DAL.cs" />
+    <Compile Include="DAL\JDKCXS_DAL.cs" />
+    <Compile Include="DAL\JDKC_DAL.cs" />
+    <Compile Include="DAL\JSGNB_DAL.cs" />
+    <Compile Include="DAL\JSNJZYKC_DAL.cs" />
+    <Compile Include="DAL\JSRole_DAL.cs" />
+    <Compile Include="DAL\JSTea_DAL.cs" />
+    <Compile Include="DAL\KCXZ_DAL.cs" />
+    <Compile Include="DAL\KCZSDY_DAL.cs" />
+    <Compile Include="DAL\KC_DAL.cs" />
+    <Compile Include="DAL\NJZYKC_DAL.cs" />
+    <Compile Include="DAL\NJ_DAL.cs" />
+    <Compile Include="DAL\XSKCView_DAL.cs" />
+>>>>>>> 879d78dc3a6be183e7eb7dd6428f3b68d0d3b2e1
+    <Compile Include="Entity\BJ.cs" />
+    <Compile Include="Entity\CPJD.cs" />
+    <Compile Include="Entity\CT.cs" />
+    <Compile Include="Entity\CTView.cs" />
+    <Compile Include="Entity\EJZB.cs" />
+    <Compile Include="Entity\GND.cs" />
+    <Compile Include="Entity\JDKC.cs" />
+    <Compile Include="Entity\JDKCView.cs" />
+    <Compile Include="Entity\JDKCXS.cs" />
+    <Compile Include="Entity\JDKCXSView.cs" />
+    <Compile Include="Entity\JSGNB.cs" />
+    <Compile Include="Entity\JSNJZYKC.cs" />
+    <Compile Include="Entity\JS_role.cs" />
+    <Compile Include="Entity\JS_Tea.cs" />
+    <Compile Include="Entity\KC.cs" />
+    <Compile Include="Entity\KCFZR.cs" />
+    <Compile Include="Entity\KCXZ.cs" />
+    <Compile Include="Entity\KCZSDY.cs" />
+    <Compile Include="Entity\NJ.cs" />
+    <Compile Include="Entity\NJZYKC.cs" />
+    <Compile Include="Entity\STZSDView.cs" />
+    <Compile Include="Entity\XSKCView.cs" />
+    <Compile Include="Entity\PCJL.cs" />
+    <Compile Include="Entity\ST.cs" />
+    <Compile Include="Entity\STZSDB.cs" />
+    <Compile Include="Entity\XK.cs" />
+    <Compile Include="Entity\XS.cs" />
+    <Compile Include="Entity\XSKCB.cs" />
+    <Compile Include="Entity\XY.cs" />
+    <Compile Include="Entity\YH.cs" />
+    <Compile Include="Entity\YHGNB.cs" />
+    <Compile Include="Entity\YHGNView.cs" />
+    <Compile Include="Entity\YHJSB.cs" />
+    <Compile Include="Entity\YHJSView.cs" />
+    <Compile Include="Entity\YJZB.cs" />
+    <Compile Include="Entity\ZSD.cs" />
+    <Compile Include="Entity\ZSDY.cs" />
+    <Compile Include="Entity\ZSLY.cs" />
+    <Compile Include="Entity\ZY.cs" />
+    <Compile Include="Entity\ZYEJZB.cs" />
+    <Compile Include="Entity\ZYEJZBView.cs" />
+    <Compile Include="Entity\ZYKC.cs" />
+    <Compile Include="Entity\ZYKCView.cs" />
+    <Compile Include="Full.aspx.cs">
+      <DependentUpon>Full.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Full.aspx.designer.cs">
+      <DependentUpon>Full.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -88,8 +247,11 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\DbConnection.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Styles\default\images\Thumbs.db" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>

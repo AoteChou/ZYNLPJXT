@@ -8,6 +8,15 @@ namespace ZYNLPJXT.Entity
     //专业课程
     public class ZYKC 
     {
+        public ZYKC()
+        {
+            kcbh= -1;
+            zybh= -1;
+            kcxzbh= -1;
+            kkxq= -1;
+            llxf= -1;
+            sjxf= -1;
+        }
         private int kcbh; //课程编号
 
         public int Kcbh
@@ -36,16 +45,16 @@ namespace ZYNLPJXT.Entity
             get { return kkxq; }
             set { kkxq = value; }
         }
-        private float llxf; //理论学分
+        private decimal llxf; //理论学分
 
-        public float Llxf
+        public decimal Llxf
         {
             get { return llxf; }
             set { llxf = value; }
         }
-        private float sjxf; //实践学分
+        private decimal sjxf; //实践学分
 
-        public float Sjxf
+        public decimal Sjxf
         {
             get { return sjxf; }
             set { sjxf = value; }

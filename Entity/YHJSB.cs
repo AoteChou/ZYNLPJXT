@@ -8,6 +8,11 @@ namespace ZYNLPJXT.Entity
     //用户角色表
     public class YHJSB
     {
+        public YHJSB()
+        {
+            yhbh= "";
+            jsbh= -1;
+        }
         private string yhbh; //用户编号
 
         public string Yhbh

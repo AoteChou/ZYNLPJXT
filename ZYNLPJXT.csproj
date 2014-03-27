@@ -39,9 +39,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -138,6 +138,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BJ_DAL.cs" />
+    <Compile Include="DAL\CTView_DAL.cs" />
+    <Compile Include="DAL\PCJL_DAL.cs" />
+    <Compile Include="DAL\STZSDB_DAL.cs" />
+    <Compile Include="DAL\STZSDView_DAL.cs" />
+    <Compile Include="DAL\ST_DAL.cs" />
+    <Compile Include="DAL\XK_DAL.cs" />
+    <Compile Include="DAL\XSKCB_DAL.cs" />
+    <Compile Include="DAL\XS_DAL.cs" />
+    <Compile Include="DAL\XY_DAL.cs" />
+    <Compile Include="DAL\YHGNB_DAL.cs" />
+    <Compile Include="DAL\YHGNView_DAL.cs" />
+    <Compile Include="DAL\YHJSB_DAL.cs" />
+    <Compile Include="DAL\YHJSView_DAL.cs" />
+    <Compile Include="DAL\YH_DAL.cs" />
+    <Compile Include="DAL\YJZB_DAL.cs" />
+    <Compile Include="DAL\ZSDY_DAL.cs" />
+    <Compile Include="DAL\ZSD_DAL.cs" />
+    <Compile Include="DAL\ZSLY_DAL.cs" />
     <Compile Include="DAL\CPJD_DAL.cs" />
     <Compile Include="DAL\CT_DAL.cs" />
     <Compile Include="DAL\EJZB_DAL.cs" />
@@ -156,6 +174,11 @@
     <Compile Include="DAL\NJZYKC_DAL.cs" />
     <Compile Include="DAL\NJ_DAL.cs" />
     <Compile Include="DAL\XSKCView_DAL.cs" />
+    <Compile Include="DAL\ZYEJZBView_DAL.cs" />
+    <Compile Include="DAL\ZYEJZB_DAL.cs" />
+    <Compile Include="DAL\ZYKCView_DAL.cs" />
+    <Compile Include="DAL\ZYKC_DAL.cs" />
+    <Compile Include="DAL\ZY_DAL.cs" />
     <Compile Include="Entity\BJ.cs" />
     <Compile Include="Entity\CPJD.cs" />
     <Compile Include="Entity\CT.cs" />
@@ -176,12 +199,12 @@
     <Compile Include="Entity\KCZSDY.cs" />
     <Compile Include="Entity\NJ.cs" />
     <Compile Include="Entity\NJZYKC.cs" />
+    <Compile Include="Entity\STZSDView.cs" />
     <Compile Include="Entity\XSKCView.cs" />
     <Compile Include="Entity\PCJL.cs" />
     <Compile Include="Entity\ST.cs" />
     <Compile Include="Entity\STZSDB.cs" />
     <Compile Include="Entity\XK.cs" />
-    <Compile Include="Entity\XKFZR.cs" />
     <Compile Include="Entity\XS.cs" />
     <Compile Include="Entity\XSKCB.cs" />
     <Compile Include="Entity\XY.cs" />
@@ -196,6 +219,7 @@
     <Compile Include="Entity\ZSLY.cs" />
     <Compile Include="Entity\ZY.cs" />
     <Compile Include="Entity\ZYEJZB.cs" />
+    <Compile Include="Entity\ZYEJZBView.cs" />
     <Compile Include="Entity\ZYKC.cs" />
     <Compile Include="Entity\ZYKCView.cs" />
     <Compile Include="Global.asax.cs">

@@ -8,6 +8,14 @@ namespace ZYNLPJXT.Entity
     //试题知识点表
     public class STZSDB
     {
+        public STZSDB()
+        {
+             zslybh= -1;
+             zsdybh= -1;
+             zsdbh= -1;
+             stbh= -1;
+             zsdbz= -1;
+        }
         private int zslybh; //知识领域编号
 
         public int Zslybh
