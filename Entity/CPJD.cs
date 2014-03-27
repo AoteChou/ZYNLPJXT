@@ -8,6 +8,41 @@ namespace ZYNLPJXT.Entity
     //测评阶段
     public class CPJD
     {
+        public CPJD() {
+            this.Njbh = -1;
+            this.Jdbh = -1;
+            this.Zybh = -1;
+            this.Jdmc = "";
+            this.Qsxq = -1;
+            this.Jzxq = -1;
+            this.Cpjdjj = "";
+        }
+
+        /// <summary>
+        /// insert使用的构造函数
+        /// </summary>
+        public CPJD(int _njbh,int _zybh,string _jdmc,int _qsxq,int _jzxq,string _cpjdjj) {
+            this.Njbh = _njbh;
+            this.Zybh = _zybh;
+            this.Jdmc = _jdmc;
+            this.Qsxq = _qsxq;
+            this.Jzxq = _jzxq;
+            this.Cpjdjj = _cpjdjj;
+        }
+
+        /// <summary>
+        /// get,update使用的构造函数
+        /// </summary>
+        public CPJD(int _jdbh,int _njbh, int _zybh, string _jdmc, int _qsxq, int _jzxq, string _cpjdjj)
+        {
+            this.Jdbh = _jdbh;
+            this.Njbh = _njbh;
+            this.Zybh = _zybh;
+            this.Jdmc = _jdmc;
+            this.Qsxq = _qsxq;
+            this.Jzxq = _jzxq;
+            this.Cpjdjj = _cpjdjj;
+        }
 
         //年级编号
         private int njbh;

@@ -8,6 +8,23 @@ namespace ZYNLPJXT.Entity
     //教师年级专业课程
     public class JSNJZYKC
     {
+        /// <summary>
+        /// 无参构造函数。字段被赋予默认值
+        /// </summary>
+        public JSNJZYKC() {
+            this.Jsbh = "";
+            this.Njbh = -1;
+            this.Zybh = -1;
+            this.Kcbh = -1;
+        }
+
+        public JSNJZYKC(string _jsbh,int _njbh,int _zybh,int _kcbh) {
+            this.Jsbh = _jsbh.Trim(); ;
+            this.Njbh = _njbh;
+            this.Zybh = _zybh;
+            this.Kcbh = _kcbh;
+        }
+
         //课程编号
         private int kcbh;
 

@@ -8,6 +8,23 @@ namespace ZYNLPJXT.Entity
     //学生课程View
     public class XSKCView
     {
+
+        //默认无参构造函数
+        public XSKCView() {
+
+            this.Xsbh ="";
+            this.Kcbh = -1;
+            this.Njbh = -1;
+            this.Zybh = -1;
+            this.Jsbh = "";
+            this.Xkbh = -1;
+            this.Kcmc = "";
+            this.Zym = "";
+            this.Zyfzr = "";
+            this.Njmc = "";
+            this.Kcjj = "";
+        }
+
         //课程简介
         private string kcjj;
 

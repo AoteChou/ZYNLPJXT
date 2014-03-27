@@ -8,6 +8,21 @@ namespace ZYNLPJXT.Entity
     //出题
     public class CT
     {
+        /// <summary>
+        /// 无参构造函数
+        /// </summary>
+        public CT() {
+            this.kcbh = -1;
+            this.Zybh = -1;
+            this.Ctr = "";
+        }
+
+        public CT(int _kcbh, int _zybh, string _ctr) {
+            this.Kcbh = _kcbh;
+            this.Zybh = _zybh;
+            this.Ctr = _ctr;
+        }
+
         //课程编号
         private int kcbh;
 
@@ -26,13 +41,13 @@ namespace ZYNLPJXT.Entity
             set { zybh = value; }
         }
 
-        //教师编号
-        private string jsbh;
+        //教师编号.  外键别名为出题人
+        private string ctr;
 
-        public string Jsbh
+        public string Ctr
         {
-            get { return jsbh; }
-            set { jsbh = value; }
+            get { return ctr; }
+            set { ctr = value; }
         }
     }
 }

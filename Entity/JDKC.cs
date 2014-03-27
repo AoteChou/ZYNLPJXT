@@ -8,6 +8,23 @@ namespace ZYNLPJXT.Entity
     //阶段课程
     public class JDKC
     {
+        /// <summary>
+        /// 无参构造函数
+        /// </summary>
+        public JDKC() {
+            this.Kcbh = -1;
+            this.Zybh = -1;
+            this.Jdbh = -1;
+            this.Njbh = -1;
+        }
+
+        public JDKC(int _kcbh,int _zybh, int _jdbh, int _njbh) {
+            this.Kcbh = _kcbh;
+            this.Zybh = _zybh;
+            this.Jdbh = _jdbh;
+            this.Njbh = _njbh;
+        }
+
         //课程编号
         private int kcbh;
 
