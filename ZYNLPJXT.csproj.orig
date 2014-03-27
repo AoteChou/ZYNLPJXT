@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BLL\text.txt" />
+    <Content Include="Full.aspx" />
+    <Content Include="Full.html" />
     <Content Include="index.aspx" />
     <Content Include="Scripts\easyloader.js" />
     <Content Include="Scripts\jquery-1.8.0.min.js" />
@@ -125,6 +127,7 @@
     <Content Include="Styles\icons\sum.png" />
     <Content Include="Styles\icons\tip.png" />
     <Content Include="Styles\icons\undo.png" />
+    <Content Include="testdownload.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -135,9 +138,54 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="www.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BJ_DAL.cs" />
+<<<<<<< HEAD
+    <Compile Include="DAL\CTView_DAL.cs" />
+    <Compile Include="DAL\PCJL_DAL.cs" />
+    <Compile Include="DAL\STZSDB_DAL.cs" />
+    <Compile Include="DAL\STZSDView_DAL.cs" />
+    <Compile Include="DAL\ST_DAL.cs" />
+    <Compile Include="DAL\XK_DAL.cs" />
+    <Compile Include="DAL\XSKCB_DAL.cs" />
+    <Compile Include="DAL\XS_DAL.cs" />
+    <Compile Include="DAL\XY_DAL.cs" />
+    <Compile Include="DAL\YHGNB_DAL.cs" />
+    <Compile Include="DAL\YHGNView_DAL.cs" />
+    <Compile Include="DAL\YHJSB_DAL.cs" />
+    <Compile Include="DAL\YHJSView_DAL.cs" />
+    <Compile Include="DAL\YH_DAL.cs" />
+    <Compile Include="DAL\YJZB_DAL.cs" />
+    <Compile Include="DAL\ZSDY_DAL.cs" />
+    <Compile Include="DAL\ZSD_DAL.cs" />
+    <Compile Include="DAL\ZSLY_DAL.cs" />
+    <Compile Include="DAL\ZYEJZBView_DAL.cs" />
+    <Compile Include="DAL\ZYEJZB_DAL.cs" />
+    <Compile Include="DAL\ZYKCView_DAL.cs" />
+    <Compile Include="DAL\ZYKC_DAL.cs" />
+    <Compile Include="DAL\ZY_DAL.cs" />
+=======
+    <Compile Include="DAL\CPJD_DAL.cs" />
+    <Compile Include="DAL\CT_DAL.cs" />
+    <Compile Include="DAL\EJZB_DAL.cs" />
+    <Compile Include="DAL\GND_DAL.cs" />
+    <Compile Include="DAL\JDKCView_DAL.cs" />
+    <Compile Include="DAL\JDKCXSView_DAL.cs" />
+    <Compile Include="DAL\JDKCXS_DAL.cs" />
+    <Compile Include="DAL\JDKC_DAL.cs" />
+    <Compile Include="DAL\JSGNB_DAL.cs" />
+    <Compile Include="DAL\JSNJZYKC_DAL.cs" />
+    <Compile Include="DAL\JSRole_DAL.cs" />
+    <Compile Include="DAL\JSTea_DAL.cs" />
+    <Compile Include="DAL\KCXZ_DAL.cs" />
+    <Compile Include="DAL\KCZSDY_DAL.cs" />
+    <Compile Include="DAL\KC_DAL.cs" />
+    <Compile Include="DAL\NJZYKC_DAL.cs" />
+    <Compile Include="DAL\NJ_DAL.cs" />
+    <Compile Include="DAL\XSKCView_DAL.cs" />
+>>>>>>> 879d78dc3a6be183e7eb7dd6428f3b68d0d3b2e1
     <Compile Include="Entity\BJ.cs" />
     <Compile Include="Entity\CPJD.cs" />
     <Compile Include="Entity\CT.cs" />
@@ -158,12 +206,12 @@
     <Compile Include="Entity\KCZSDY.cs" />
     <Compile Include="Entity\NJ.cs" />
     <Compile Include="Entity\NJZYKC.cs" />
+    <Compile Include="Entity\STZSDView.cs" />
     <Compile Include="Entity\XSKCView.cs" />
     <Compile Include="Entity\PCJL.cs" />
     <Compile Include="Entity\ST.cs" />
     <Compile Include="Entity\STZSDB.cs" />
     <Compile Include="Entity\XK.cs" />
-    <Compile Include="Entity\XKFZR.cs" />
     <Compile Include="Entity\XS.cs" />
     <Compile Include="Entity\XSKCB.cs" />
     <Compile Include="Entity\XY.cs" />
@@ -178,8 +226,16 @@
     <Compile Include="Entity\ZSLY.cs" />
     <Compile Include="Entity\ZY.cs" />
     <Compile Include="Entity\ZYEJZB.cs" />
+    <Compile Include="Entity\ZYEJZBView.cs" />
     <Compile Include="Entity\ZYKC.cs" />
     <Compile Include="Entity\ZYKCView.cs" />
+    <Compile Include="Full.aspx.cs">
+      <DependentUpon>Full.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Full.aspx.designer.cs">
+      <DependentUpon>Full.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,11 +247,7 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-    <Compile Include="Utility\SQLServerDALHelper.cs" />
-=======
     <Compile Include="Utility\DbConnection.cs" />
->>>>>>> 495de0ab83f97d03c6d57470aef5af7678acbc0b
   </ItemGroup>
   <ItemGroup>
     <None Include="Styles\default\images\Thumbs.db" />

@@ -52,8 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BLL\text.txt" />
-    <Content Include="Full.aspx" />
-    <Content Include="Full.html" />
     <Content Include="index.aspx" />
     <Content Include="Scripts\easyloader.js" />
     <Content Include="Scripts\jquery-1.8.0.min.js" />
@@ -127,7 +125,6 @@
     <Content Include="Styles\icons\sum.png" />
     <Content Include="Styles\icons\tip.png" />
     <Content Include="Styles\icons\undo.png" />
-    <Content Include="testdownload.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -138,7 +135,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="www.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BJ_DAL.cs" />
@@ -226,13 +222,6 @@
     <Compile Include="Entity\ZYEJZBView.cs" />
     <Compile Include="Entity\ZYKC.cs" />
     <Compile Include="Entity\ZYKCView.cs" />
-    <Compile Include="Full.aspx.cs">
-      <DependentUpon>Full.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Full.aspx.designer.cs">
-      <DependentUpon>Full.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
