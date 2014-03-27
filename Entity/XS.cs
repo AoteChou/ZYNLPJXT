@@ -8,6 +8,12 @@ namespace ZYNLPJXT.Entity
     //学生
     public class XS
     {
+        public XS()
+        {
+          bjbh= -1;
+          xsbh= "";
+          rxnf = DateTime.Parse("1753/1/1");
+        }
         private int bjbh; //班级编号
 
         public int Bjbh

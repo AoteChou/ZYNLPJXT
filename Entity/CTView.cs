@@ -8,12 +8,14 @@ namespace ZYNLPJXT.Entity
     //试题视图
     public class CTView
     {
-        private string jsbh; //教师编号
 
-        public string Jsbh
+        
+        private string ctr; //教师编号
+
+        public string Ctr
         {
-            get { return jsbh; }
-            set { jsbh = value; }
+            get { return ctr; }
+            set { ctr = value; }
         }
         private string kcjj; //课程简介
 
@@ -78,16 +80,16 @@ namespace ZYNLPJXT.Entity
             get { return kkxq; }
             set { kkxq = value; }
         }
-        private float llxf; //理论学分
+        private decimal llxf; //理论学分
 
-        public float Llxf
+        public decimal Llxf
         {
             get { return llxf; }
             set { llxf = value; }
         }
-        private float sjxf; //实践学分
+        private decimal sjxf; //实践学分
 
-        public float Sjxf
+        public decimal Sjxf
         {
             get { return sjxf; }
             set { sjxf = value; }

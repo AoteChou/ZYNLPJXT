@@ -8,6 +8,13 @@ namespace ZYNLPJXT.Entity
     //专业
     public class ZY
     {
+        public ZY()
+        {
+            zybh= -1;
+            xkbh= -1;
+            zym= "";
+            zyfzr= "";
+        }
         private int zybh; //专业编号
 
         public int Zybh

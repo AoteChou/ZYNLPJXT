@@ -8,12 +8,22 @@ namespace ZYNLPJXT.Entity
     //评测记录
     public class PCJL
     {
-        private int pcjvbh; //评测记录编号
-
-        public int Pcjvbh
+        public PCJL()
         {
-            get { return pcjvbh; }
-            set { pcjvbh = value; }
+          stbh= -1;
+          xsbh= "";
+          xzrq = DateTime.Parse("1753/1/1");
+          scrq = DateTime.Parse("1753/1/1");
+          pcfs= -1;
+          pcjlbh= -1;
+          gtr= "";
+        }
+        private int pcjlbh; //评测记录编号
+
+        public int Pcjlbh
+        {
+            get { return pcjlbh; }
+            set { pcjlbh = value; }
         }
         private int stbh; //试题编号
 
@@ -51,6 +61,13 @@ namespace ZYNLPJXT.Entity
         {
             get { return pcfs; }
             set { pcfs = value; }
+        }
+        private string gtr; //改题人
+
+        public string Gtr
+        {
+            get { return gtr; }
+            set { gtr = value; }
         }
 
     }

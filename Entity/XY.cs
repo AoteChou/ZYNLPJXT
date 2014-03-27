@@ -8,6 +8,11 @@ namespace ZYNLPJXT.Entity
     //学院
     public class XY
     {
+        public XY()
+        {
+            xybh= -1;
+            xymc= "";
+        }
         private int xybh; //学院编号 
 
         public int Xybh

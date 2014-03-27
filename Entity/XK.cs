@@ -8,6 +8,13 @@ namespace ZYNLPJXT.Entity
     //学科
     public class XK
     {
+        public XK()
+        {
+          xkbh= -1;
+          xybh= -1;
+          xkfzr = "";
+          xkmc= "";
+        }
         private int xkbh; //学科编号
 
         public int Xkbh
@@ -22,12 +29,12 @@ namespace ZYNLPJXT.Entity
             get { return xybh; }
             set { xybh = value; }
         }
-        private string jsbh; //教师编号
+        private string xkfzr; //教师编号
 
-        public string Jsbh
+        public string Xkfzr
         {
-            get { return jsbh; }
-            set { jsbh = value; }
+            get { return xkfzr; }
+            set { xkfzr = value; }
         }
         private string xkmc; //学科名称
 

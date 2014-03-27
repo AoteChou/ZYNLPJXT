@@ -8,6 +8,12 @@ namespace ZYNLPJXT.Entity
     //专业二级指标
     public class ZYEJZB
     {
+        public ZYEJZB()
+        {
+            ejzbbh= -1;
+            zybh= -1;
+            nlyq= -1;
+        }
         private int ejzbbh; //二级指标编号
 
         public int Ejzbbh

@@ -8,6 +8,12 @@ namespace ZYNLPJXT.Entity
     //知识领域
     public class ZSLY
     {
+        public ZSLY()
+        {
+            zslybh= -1;
+            zslymc= "";
+            bz= "";
+        }
         private int zslybh; //知识领域编号
 
         public int Zslybh

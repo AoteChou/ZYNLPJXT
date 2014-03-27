@@ -8,6 +8,11 @@ namespace ZYNLPJXT.Entity
     //用户功能表
     public class YHGNB
     {
+        public YHGNB()
+        {
+            gnbh= -1;
+            yhbh= "";
+        }
         private int gnbh; //功能编号
 
         public int Gnbh

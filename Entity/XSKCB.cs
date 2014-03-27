@@ -8,6 +8,14 @@ namespace ZYNLPJXT.Entity
     //学生课程表
     public class XSKCB
     {
+        public XSKCB()
+        {
+          kcbh= -1;
+          zybh= -1;
+          njbh= -1;
+          jsbh= "";
+          xsbh= "";
+        }
         private int kcbh; //课程编号
 
         public int Kcbh
