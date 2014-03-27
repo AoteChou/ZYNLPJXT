@@ -14,10 +14,9 @@ namespace ZYNLPJXT.Utility
     /// </summary>
     public class DbConnection
     {
-         //private static string SqlConUrl = ConfigurationManager.AppSettings["connectionStr"];
+         private static string SqlConUrl = ConfigurationManager.AppSettings["connectionStr"];
 
-        private static string SqlConUrl = "server=JESSEN-PC;database=ZYNLPJXT;uid=sa;pwd='sa'";
-
+        
          private SqlConnection sqlCon=null;
 
          public DbConnection() {
