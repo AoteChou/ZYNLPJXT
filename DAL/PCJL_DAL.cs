@@ -39,6 +39,7 @@ namespace ZYNLPJXT.DAL
                 pcjl.Scrq = (DateTime)(sdReader["scrq"]);
                 pcjl.Pcfs = (int)(sdReader["pcfs"]);
                 pcjl.Gtr = (string)(sdReader["gtr"]);
+                pcjl.Xsstda = (string)(sdReader["xsstda"]);
 
             }
             dbConnection.closeDbCon();
@@ -52,7 +53,7 @@ namespace ZYNLPJXT.DAL
         public bool insertPCJL(PCJL pcjl)
         {
 
-            String sqlString = "insert into PCJL (STBH,XSBH,XZRQ,SCRQ,PCFS,GTR) values (@stbh,@xsbh,@xzrq,@scrq,@pcfs,@gtr)";
+            String sqlString = "insert into PCJL (STBH,XSBH,XZRQ,SCRQ,PCFS,GTR,XSSTDA) values (@stbh,@xsbh,@xzrq,@scrq,@pcfs,@gtr,@xsstda)";
             
 
             SqlParameter[] sqlParameters ={
@@ -61,7 +62,8 @@ namespace ZYNLPJXT.DAL
                 new SqlParameter("@xzrq",pcjl.Xzrq),
                 new SqlParameter("@scrq",pcjl.Scrq),
                 new SqlParameter("@pcfs",pcjl.Pcfs),
-                new SqlParameter("@gtr",pcjl.Gtr==""?(object)DBNull.Value:pcjl.Gtr)
+                new SqlParameter("@gtr",pcjl.Gtr==""?(object)DBNull.Value:pcjl.Gtr),
+                 new SqlParameter("@xsstda",pcjl.Xsstda)
                 
             };
 
@@ -123,7 +125,7 @@ namespace ZYNLPJXT.DAL
         public bool updatePCJL(PCJL pcjl)
         {
 
-            String sqlString = "update PCJL set stbh=@stbh,xsbh=@xsbh,xzrq=@xzrq,scrq=@scrq,pcfs=@pcfs,gtr=@gtr where pcjlbh=@pcjlbh";
+            String sqlString = "update PCJL set stbh=@stbh,xsbh=@xsbh,xzrq=@xzrq,scrq=@scrq,pcfs=@pcfs,gtr=@gtr,xsstda=@xsstda where pcjlbh=@pcjlbh";
            
             SqlParameter[] sqlparameters ={
                 new SqlParameter("@stbh",pcjl.Stbh),
@@ -132,7 +134,8 @@ namespace ZYNLPJXT.DAL
                 new SqlParameter("@scrq",pcjl.Scrq),
                 new SqlParameter("@pcfs",pcjl.Pcfs),
                 new SqlParameter("@gtr",pcjl.Gtr==""?(object)DBNull.Value:pcjl.Gtr),
-                new SqlParameter("@pcjlbh",pcjl.Pcjlbh)
+                new SqlParameter("@pcjlbh",pcjl.Pcjlbh),
+                new SqlParameter("@xsstda",pcjl.Xsstda)
             };
             
             

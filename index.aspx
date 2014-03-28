@@ -1,27 +1,65 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ZYNLPJXT.index" %>
 
-<!DOCTYPE html >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>学生能力评价系统</title>
     <link rel="Stylesheet" type="text/css" href="Styles/default/easyui.css" />
     <link rel="Stylesheet" type="text/css" href="Styles/icon.css" /> 
      <script type="text/javascript" src="Scripts/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="Scripts/jquery.easyui.min.js"></script>
    </head>
-<body class="easyui-layout" style="text-align:left">
-	<div data-options="region:'north',border:false" style="height:60px;background:#666666;padding:10px">
-       学生能力评价系统
+<body class="easyui-layout">
+	<div data-options="region:'north',border:false" style="height:80px;background:#666;padding:10px;overflow:hidden;">
+      		<h1 style="color:#ECFEFF;display:inline-block; font-family: '华文细黑','微软雅黑', '造字工房悦黑体验版纤细体', 'Times New Roman'">专业能力评价系统</h1>
+         	<h3 style="float:right;color:white;">XXX欢迎登陆   2013/3/3 12:00:21  <a href="javascript:void(0)">退出</a></h3>
+    
     </div>
-	
-    <div data-options="region:'west',collapsible:false,split:false,title:'菜单'" style="width:150px;padding:10px;">
-    菜单
+	<div data-options="region:'west',split:true,noheader:true" style="width:300px">
+    	    <div id="aa" class="easyui-accordion" data-options="fit:'true',border:'false'">
+   				 <div title="Title1" style="overflow:auto;padding:10px;">
+    				
+                   <li><a href="javascript:void(0)" onclick="addTab('tabs2','www.html')">dada</a></li>
+                  </div>
+    			<div title="Title2" style="padding:10px;">
+    				content2
+   				 </div>
+    			<div title="Title3">
+    				content3
+    			</div>
+    		</div>
     </div>
-	
-	<div data-options="region:'center',title:'工作区'">
-		center
-	</div>
+	<div data-options="region:'south',border:false" style="height:20px;background:#E6EEF8;padding:10px;">
+    	
+    </div>
+	<div data-options="region:'center',title:'Center',noheader:true">
+    	<div id="tabs" class="easyui-tabs" data-options="fit:true,plain:true,border:false">
+        	<div title="Tab1" style="padding:20px;display:none;">
+			tab1
+			</div>
+    	</div>
+    </div>
+<script type="text/javascript">
+    var index = 0
+    function addTab(title, url) {
+        var tab = $('#tabs').tabs('exists', title);
+        if (tab) {
+            //存在的话 打开
+            $('#tabs').tabs('select', title);
+        } else {
+            //不存在的话 新建一个
+            index++;
+            $("#tabs").tabs('add', {
+                title: title,
+                content: "<iframe width='100%' height='100%' style='_border:none;'  class='myIframe' frameborder='0' scrolling='no'  src='" + url + "'></iframe>",
+                closable: true
+            });
+        }
+
+    }
+
+</script>
 </body>
 </html>

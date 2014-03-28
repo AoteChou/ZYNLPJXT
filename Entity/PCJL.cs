@@ -17,6 +17,7 @@ namespace ZYNLPJXT.Entity
           pcfs= -1;
           pcjlbh= -1;
           gtr= "";
+          xsstda = "";
         }
         private int pcjlbh; //评测记录编号
 
@@ -69,6 +70,14 @@ namespace ZYNLPJXT.Entity
             get { return gtr; }
             set { gtr = value; }
         }
+        private string xsstda;//学生试题答案
+
+        public string Xsstda
+        {
+            get { return xsstda; }
+            set { xsstda = value; }
+        }
+
 
     }
 }

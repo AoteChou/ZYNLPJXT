@@ -135,6 +135,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="www.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BJ_DAL.cs" />
