@@ -15,6 +15,14 @@ namespace ZYNLPJXT.Entity
             xm= "";
             xb= -1;
         }
+
+        public YH(string _yhbh, string _mm, string _xm, Int16 _xb) {
+            this.Yhbh = _yhbh;
+            this.Mm = _mm;
+            this.Xm = _xm;
+            this.Xb = _xb;
+        }
+
         private string yhbh; //用户编号
 
         public string Yhbh

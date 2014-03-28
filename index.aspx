@@ -14,26 +14,34 @@
 <body class="easyui-layout">
 	<div data-options="region:'north',border:false" style="height:80px;background:#666;padding:10px;overflow:hidden;">
       		<h1 style="color:#ECFEFF;display:inline-block; font-family: '华文细黑','微软雅黑', '造字工房悦黑体验版纤细体', 'Times New Roman'">专业能力评价系统</h1>
-         	<h3 style="float:right;color:white;">XXX欢迎登陆   2013/3/3 12:00:21  <a href="javascript:void(0)">退出</a></h3>
-    
+         	<h3 style="float:right;color:white;"><%= ((ZYNLPJXT.Entity.YH)Session["yh"]).Xm.Trim() %> 欢迎登陆   2013/3/3 12:00:21  <a href="processAspx/logout.aspx">退出</a></h3>
     </div>
+
 	<div data-options="region:'west',split:true,noheader:true" style="width:300px">
     	    <div id="aa" class="easyui-accordion" data-options="fit:'true',border:'false'">
-   				 <div title="Title1" style="overflow:auto;padding:10px;">
-    				
-                   <li><a href="javascript:void(0)" onclick="addTab('tabs2','www.html')">dada</a></li>
-                  </div>
-    			<div title="Title2" style="padding:10px;">
-    				content2
-   				 </div>
-    			<div title="Title3">
-    				content3
-    			</div>
-    		</div>
+            <%  for (int i = 0; i < this.menus.Length; i++) {
+
+                    if (i == 0)
+                    {
+                        Response.Write("<div title=\"" + menus[i].MenuName + "\" style=\"overflow:auto;padding:10px;\"> ");
+                    }
+                    else {
+                        Response.Write("<div title=\"" + menus[i].MenuName + "\" style=\"padding:10px;\"> ");
+                    }
+
+                    for (int j = 0; j < menus[i].ItemMenu.Length; j++) {
+                        Response.Write("<li><a href=\"javascript:void(0)\" onclick=\"addTab('" + menus[i].ItemMenu[j].MenuName + "','" + "http://localhost/ZYNLPJXT/" + menus[i].ItemMenu[j].MenuContent + "')\">" + menus[i].ItemMenu[j].MenuName + "</a></li>");
+                    }
+
+                    Response.Write("</div>");
+           }  %>
+
+         </div>
     </div>
+    
 	<div data-options="region:'south',border:false" style="height:20px;background:#E6EEF8;padding:10px;">
-    	
     </div>
+
 	<div data-options="region:'center',title:'Center',noheader:true">
     	<div id="tabs" class="easyui-tabs" data-options="fit:true,plain:true,border:false">
         	<div title="Tab1" style="padding:20px;display:none;">
@@ -46,10 +54,13 @@
     function addTab(title, url) {
         var tab = $('#tabs').tabs('exists', title);
         if (tab) {
+
             //存在的话 打开
             $('#tabs').tabs('select', title);
+
         } else {
             //不存在的话 新建一个
+   
             index++;
             $("#tabs").tabs('add', {
                 title: title,

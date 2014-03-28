@@ -46,5 +46,41 @@ namespace ZYNLPJXT.DAL
             dbConnection.closeDbCon();
             return yhgnList.ToArray();
         }
+
+
+        public MainMenu[] getUserMenu(YH yh) {
+
+            string sql = "select distinct SSML from YHGNView where yhbh='"+yh.Yhbh.Trim()+"'";
+            DbConnection dbCon = new DbConnection();
+            SqlDataReader reader = dbCon.executeQuery(sql);
+            List<string> ssmls = new List<string>();
+            while (reader.Read()) {
+                ssmls.Add((string)reader["ssml"]);
+            }
+            reader.Close();
+            dbCon.closeDbCon();
+
+            
+             DbConnection dbCon2 = new DbConnection();
+            List<MainMenu> mainMenus=new List<MainMenu> ();
+            foreach(string ssml in ssmls){
+                string realSql = "select * from YHGNView where yhbh=@yhbh and ssml=@ssml";
+                SqlParameter[] sqlPars = { new SqlParameter("@yhbh",yh.Yhbh),
+                                           new SqlParameter("@ssml",ssml)
+                                         };
+                SqlDataReader realReader = dbCon2.executeQuery(realSql, sqlPars);
+                List<ItemMenu> itemMenus = new List<ItemMenu>();
+                while (realReader.Read()) {
+                    itemMenus.Add(new ItemMenu((string)realReader["gnm"],(string)realReader["gnlj"],(int)realReader["gnbh"]));
+                }
+                realReader.Close();
+                mainMenus.Add(new MainMenu(ssml,itemMenus.ToArray()));
+            }
+
+            MainMenu[] mainMenuArray=mainMenus.ToArray();
+            dbCon2.closeDbCon();
+            return mainMenuArray;
+        }
+
     }
 }
