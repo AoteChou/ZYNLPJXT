@@ -41,6 +41,26 @@ namespace ZYNLPJXT.DAL
             dbConnection.closeDbCon();
             return yh;
         }
+
+        public bool isExist(YH yh) {
+            string sql = "select * from yh where yhbh=@yhbh and mm=@mm";
+            SqlParameter[] sqlparameters =
+            {
+                new SqlParameter("@yhbh",yh.Yhbh),
+                new SqlParameter("@mm",yh.Mm)
+                           };
+            DbConnection dbConnection = new DbConnection();
+            SqlDataReader sdReader = dbConnection.executeQuery(sql, sqlparameters);
+            if (sdReader.Read())
+            {
+                dbConnection.closeDbCon();
+                return true;
+            }
+            dbConnection.closeDbCon();
+            return false;
+        
+        }
+
         /// <summary>
         /// 插入用户
         /// </summary>

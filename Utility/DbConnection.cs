@@ -15,7 +15,6 @@ namespace ZYNLPJXT.Utility
     public class DbConnection
     {
          private static string SqlConUrl = ConfigurationManager.AppSettings["connectionStr"];
-
         
          private SqlConnection sqlCon=null;
 
@@ -55,7 +54,7 @@ namespace ZYNLPJXT.Utility
 
             SqlCommand sqlCom = new SqlCommand(sql, sqlCon);
             sqlCom.Parameters.AddRange(sqlparameters);
-            SqlDataReader reader = sqlCom.ExecuteReader(CommandBehavior.CloseConnection);
+            SqlDataReader reader = sqlCom.ExecuteReader();
             return reader;
         }
 
