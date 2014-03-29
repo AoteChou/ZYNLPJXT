@@ -17,7 +17,7 @@ namespace ZYNLPJXT.DAL
         /// 通过试题编号获取具体的知识点
         /// </summary>
         /// <param name="stbh">试题编号</param>
-        /// <returns>实体知识点数组</returns>
+        /// <returns>试题知识点数组</returns>
         public STZSDView[] getbySTBH(int stbh)
         {
             string sqlString = "select * from stzsdview where stbh=@stbh";
@@ -26,7 +26,7 @@ namespace ZYNLPJXT.DAL
                 new SqlParameter("@stbh",stbh)
                            };
 
-            STZSDView stzsdview = new STZSDView();
+            STZSDView stzsdview = null;
 
             List<STZSDView> stzsdList = new List<STZSDView>();
 
@@ -34,6 +34,7 @@ namespace ZYNLPJXT.DAL
             SqlDataReader sdReader = dbConnection.executeQuery(sqlString, sqlparameters);
             while (sdReader.Read())
             {
+               stzsdview = new STZSDView();
                stzsdview.Stbh = stbh;
                stzsdview.Zslymc= (string)(sdReader["zslymc"]);
                stzsdview.Zsly_bz= (string)(sdReader["zsly_bz"]);
@@ -46,6 +47,11 @@ namespace ZYNLPJXT.DAL
                stzsdview.Zsdybh= (int)(sdReader["zsdybh"]);
                stzsdview.Zsdbh= (int)(sdReader["zsdbh"]);
                stzsdview.Zsdbz= (decimal)(sdReader["zsdbz"]);
+              stzsdview.Kcbh= (int)(sdReader["kcbh"]);
+              stzsdview.Ctsj= (DateTime)(sdReader["ctsj"]);
+              stzsdview.Ctr= (string)(sdReader["ctr"]);
+              stzsdview.Sfsc = (Int16)(sdReader["sfsc"]);
+              stzsdview.Kcmc = (string)(sdReader["kcmc"]);
 
                 stzsdList.Add(stzsdview);
 
@@ -66,7 +72,7 @@ namespace ZYNLPJXT.DAL
                 new SqlParameter("@zsdbh",zsdbh)
                            };
 
-            STZSDView stzsdview = new STZSDView();
+            STZSDView stzsdview = null;
 
             List<STZSDView> stzsdList = new List<STZSDView>();
 
@@ -74,6 +80,7 @@ namespace ZYNLPJXT.DAL
             SqlDataReader sdReader = dbConnection.executeQuery(sqlString, sqlparameters);
             while (sdReader.Read())
             {
+                stzsdview = new STZSDView();
                 stzsdview.Stbh = (int)(sdReader["stbh"]);
                 stzsdview.Zslymc = (string)(sdReader["zslymc"]);
                 stzsdview.Zsly_bz = (string)(sdReader["zsly_bz"]);
@@ -86,6 +93,11 @@ namespace ZYNLPJXT.DAL
                 stzsdview.Zsdybh = (int)(sdReader["zsdybh"]);
                 stzsdview.Zsdbh = zsdbh;
                 stzsdview.Zsdbz = (decimal)(sdReader["zsdbz"]);
+                stzsdview.Kcbh = (int)(sdReader["kcbh"]);
+                stzsdview.Ctsj = (DateTime)(sdReader["ctsj"]);
+                stzsdview.Ctr = (string)(sdReader["ctr"]);
+                stzsdview.Sfsc = (Int16)(sdReader["sfsc"]);
+                stzsdview.Kcmc = (string)(sdReader["kcmc"]);
 
                 stzsdList.Add(stzsdview);
 
@@ -128,6 +140,11 @@ namespace ZYNLPJXT.DAL
                 stzsdview.Zsdybh = (int)(sdReader["zsdybh"]);
                 stzsdview.Zsdbh = zsdbh;
                 stzsdview.Zsdbz = (decimal)(sdReader["zsdbz"]);
+                stzsdview.Kcbh = (int)(sdReader["kcbh"]);
+                stzsdview.Ctsj = (DateTime)(sdReader["ctsj"]);
+                stzsdview.Ctr = (string)(sdReader["ctr"]);
+                stzsdview.Sfsc = (Int16)(sdReader["sfsc"]);
+                stzsdview.Kcmc = (string)(sdReader["kcmc"]);
 
 
 

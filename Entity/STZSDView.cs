@@ -94,5 +94,41 @@ namespace ZYNLPJXT.Entity
             get { return zsdbz; }
             set { zsdbz = value; }
         }
+        private int kcbh;//课程编号
+
+        public int Kcbh
+        {
+            get { return kcbh; }
+            set { kcbh = value; }
+        }
+        private DateTime ctsj;//出题时间
+
+        public DateTime Ctsj
+        {
+            get { return ctsj; }
+            set { ctsj = value; }
+        }
+        private string ctr;//出题人
+
+        public string Ctr
+        {
+            get { return ctr; }
+            set { ctr = value; }
+        }
+        private Int16 sfsc;//是否删除
+
+        public Int16 Sfsc
+        {
+            get { return sfsc; }
+            set { sfsc = value; }
+        }
+        private string kcmc;//课程名称
+
+        public string Kcmc
+        {
+            get { return kcmc; }
+            set { kcmc = value; }
+        }
+
     }
 }

@@ -69,7 +69,7 @@ namespace ZYNLPJXT.DAL
                            };
 
             List<CTView> ctList = new List<CTView>();
-            CTView ctview = new CTView();
+            CTView ctview = null;
 
 
 
@@ -77,6 +77,8 @@ namespace ZYNLPJXT.DAL
             SqlDataReader sdReader = dbConnection.executeQuery(sqlString, sqlparameters);
             while (sdReader.Read())
             {
+                ctview = new CTView();
+
                 ctview.Zybh = (int)(sdReader["zybh"]);
                 ctview.Kcjj = (string)(sdReader["kcjj"]);
                 ctview.Kcmc = (string)(sdReader["kcmc"]);

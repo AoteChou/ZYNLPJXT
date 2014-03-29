@@ -172,18 +172,18 @@ namespace ZYNLPJXT.Entity
         }
 
         //理论学分
-        private float llxf;
+        private decimal llxf;
 
-        public float Llxf
+        public decimal Llxf
         {
             get { return llxf; }
             set { llxf = value; }
         }
 
         //实践学分
-        private int sjxf;
+        private decimal sjxf;
 
-        public int Sjxf
+        public decimal Sjxf
         {
             get { return sjxf; }
             set { sjxf = value; }

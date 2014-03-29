@@ -119,5 +119,38 @@ namespace ZYNLPJXT.DAL
 
             return true;
         }
+        /// <summary>
+        /// 获取试题的知识点及其比重
+        /// </summary>
+        /// <param name="stbh">试题编号</param>
+        /// <returns>试题知识点表数组</returns>
+        public STZSDB[] getbySTBH(int stbh) { 
+            
+       
+            string sqlString = "select * from xy where stbh=@stbh";
+            SqlParameter[] sqlparameters =
+            {
+                new SqlParameter("@stbh",stbh)
+                           };
+            List<STZSDB> stzsdbList = new List<STZSDB>();
+            STZSDB stzsdb = null;
+
+            DbConnection dbConnection = new DbConnection();
+            SqlDataReader sdReader = dbConnection.executeQuery(sqlString, sqlparameters);
+            if (sdReader.Read())
+            {
+
+                stzsdb = new STZSDB();
+                stzsdb.Stbh = stbh;
+                stzsdb.Zsdbh=(int)(sdReader["zsdbh"]);
+                stzsdb.Zsdbz = (float)(sdReader["zsdbz"]);
+                stzsdb.Zsdybh = (int)(sdReader["zsdybh"]);
+                stzsdb.Zslybh = (int)(sdReader["zslybh"]);
+
+                stzsdbList.Add(stzsdb);
+            }
+            dbConnection.closeDbCon();
+            return stzsdbList.ToArray();
+        }
     }
 }

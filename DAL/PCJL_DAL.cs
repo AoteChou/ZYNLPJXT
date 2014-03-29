@@ -158,5 +158,35 @@ namespace ZYNLPJXT.DAL
 
             return true;
         }
+        /// <summary>
+        /// 获取特定课程下的评测记录数目
+        /// </summary>
+        /// <param name="kcbh">课程编号（数组）</param>
+        /// <returns>评测记录数目（数组）</returns>
+        public int[] getPCJLNumByKCBH(int[] kcbhs)
+        {
+            
+            List<int> numList = new List<int>();
+            int num = 0;
+            DbConnection dbConnection = new DbConnection(); 
+            foreach (int kcbh in kcbhs) {
+                string sqlString = "select count(*) from pcjl where pcjl.stbh in(select stbh from st where kcbh=@kcbh)";
+                SqlParameter[] sqlparameters =
+                {
+                    new SqlParameter("@kcbh",kcbh)
+                           };
+                SqlDataReader sdReader = dbConnection.executeQuery(sqlString, sqlparameters);
+                if (sdReader.Read())
+                {
+                    num = (int)(sdReader[0]);
+                }
+                sdReader.Close();
+                numList.Add(num);
+            }
+            
+            dbConnection.closeDbCon();
+            return numList.ToArray();
+        }
+        
     }
 }

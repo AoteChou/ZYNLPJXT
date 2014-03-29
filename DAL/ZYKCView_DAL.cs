@@ -26,7 +26,7 @@ namespace ZYNLPJXT.DAL
                 new SqlParameter("@zybh",zybh)
                            };
 
-            ZYKCView zykcview = new ZYKCView();
+            ZYKCView zykcview = null;
 
             List<ZYKCView> zykcList = new List<ZYKCView>();
 
@@ -34,6 +34,7 @@ namespace ZYNLPJXT.DAL
             SqlDataReader sdReader = dbConnection.executeQuery(sqlString, sqlparameters);
             while (sdReader.Read())
             {
+                zykcview = new ZYKCView();
                 zykcview.Zybh = zybh;
                 zykcview.Kcjj = (string)(sdReader["kcjj"]);
                 zykcview.Kcmc= (string)(sdReader["kcmc"]);

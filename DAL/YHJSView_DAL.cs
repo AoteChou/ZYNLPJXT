@@ -27,7 +27,7 @@ namespace ZYNLPJXT.DAL
                 new SqlParameter("@yhbh",yhbh)
                            };
 
-            YHJSView yhjsview = new YHJSView();
+            YHJSView yhjsview = null;
 
             List<YHJSView> yhjsList = new List<YHJSView>();
 
@@ -35,6 +35,7 @@ namespace ZYNLPJXT.DAL
             SqlDataReader sdReader = dbConnection.executeQuery(sqlString, sqlparameters);
             while (sdReader.Read())
             {
+                yhjsview = new YHJSView();
                 yhjsview.Yhbh = yhbh;
                 yhjsview.Jsm= (string)(sdReader["jsm"]);
                 yhjsview.Mm= (string)(sdReader["mm"]);
